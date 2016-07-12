@@ -1,13 +1,13 @@
-var Programmer = function(name, title, age, lang) {
-  this.name = name;
-  this.title = title;
-  this.age = age;
-  this.lang = lang;
+var Programmer = function(options) {
+  this.name = options.name;
+  this.title = options.title;
+  this.age = options.age;
+  this.lang = options.lang;
   this.print = function() {
     console.log(this.name, this.title, this.age, this.lang);
   };
 }
 
-var Whitley = new Programmer('Whitley', 'Bitcoin Dev', 22, 'Javascript');
+var Whitley = new Programmer({name: 'Whitley', title: 'Bitcoin Dev', age: 22, lang: 'Javascript'});
 
 Whitley.print();
